@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#6b96b8"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:foreground="@drawable/logistic" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="248dp"
+        android:layout_height="88dp"
+        android:layout_marginBottom="24dp"
+        android:foreground="@drawable/logistic"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:padding="10dp"
+        android:hint="Username"
+        android:background="#BDCDD6"
+        />
+
+    <EditText
+        android:id="@+id/passwordEditText"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:padding="10dp"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:background="#BDCDD6"
+        android:layout_marginTop="10dp"
+        />
+
+    <CheckBox
+        android:id="@+id/showPasswordCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginStart="10dp"
+        android:text="Show In My Password" />
+
+    <Button
+        android:id="@+id/Login_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Masuk"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="12sp"
+        />
+
+    <TextView
+        android:id="@+id/copyrightTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center_horizontal"
+        android:text="© 2023 Logistic - SMK Yadika Kalijati. All rights reserved."
+        android:textSize="12sp"
+        />
+
+
+</LinearLayout>

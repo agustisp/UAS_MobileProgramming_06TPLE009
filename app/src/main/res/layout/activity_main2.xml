@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/images"
+    android:gravity="top"
+    android:orientation="vertical"
+    android:padding="37dp"
+    tools:context=".MainActivity2">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="24dp"
+        android:gravity="center|top"
+        android:text="DASHBOARD"
+        android:textSize="35dp"
+        android:textStyle="bold"
+        tools:visibility="visible" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="432dp"
+        android:layout_marginTop="20dp"
+        android:drawableTop="@mipmap/ic_launcher_foreground"
+        android:fontFamily="monospace"
+        android:gravity="center"
+        android:text="Selamat Anda Sudah Berhasil Masuk"
+        android:textColor="@color/black"
+        android:textSize="30dp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btnList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Barang Masuk"
+        android:textSize="20dp"/>
+
+    <Button
+        android:id="@+id/Keluar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Keluar"
+        android:textSize="20dp" />
+
+
+</LinearLayout>
