@@ -13,7 +13,7 @@ import android.widget.Button;
 import android.widget.ListView;
 
 public class MainActivity2 extends AppCompatActivity {
-    Button Keluar, btnList;
+    Button Keluar, btnList, btnKelolaAdmin;
     AlertDialog.Builder builder;
 
     @Override
@@ -23,7 +23,17 @@ public class MainActivity2 extends AppCompatActivity {
 
         Keluar = findViewById(R.id.Keluar);
         btnList = (Button) findViewById(R.id.btnList);
+        btnKelolaAdmin = (Button) findViewById(R.id.btnKelolaAdmin);
         builder = new AlertDialog.Builder(this);
+
+        btnKelolaAdmin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity2.this, v_kelola_admin.class);
+                startActivity(intent);
+                finish();
+            }
+        });
 
         Keluar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -50,7 +60,6 @@ public class MainActivity2 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(MainActivity2.this, MainActivity3.class));
-                finish();
             }
         });
     }
