@@ -1,5 +1,6 @@
 package com.example.tugasproject;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
@@ -75,5 +76,18 @@ public class DatabaseHelper extends SQLiteOpenHelper{
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_KELUAR);
         // Create the table again
         onCreate(db);
+    }
+
+    public long insertBarangMasuk(String nama, String merk, int jumlah, int harga, String penanggungJawab) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(COLUMN_NAMA_BARANG, nama);
+        values.put(COLUMN_MERK_BARANG, merk);
+        values.put(COLUMN_JUMLAH_BARANG, jumlah);
+        values.put(COLUMN_HARGA_BARANG, harga);
+        values.put(COLUMN_PENANGGUNG_JAWAB_MASUK, penanggungJawab);
+        long id = db.insert(TABLE_MASUK, null, values);
+        db.close();
+        return id;
     }
 }

@@ -10,15 +10,23 @@ import android.widget.Button;
 import android.widget.ListView;
 
 public class MainActivity3 extends AppCompatActivity {
-    ListView listView;
-    Button btnkembali;
+    Button btnkembali, btnTambahBarangMasuk;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main3);
 
+        btnTambahBarangMasuk = (Button) findViewById(R.id.btnTambahBarangMasuk);
         btnkembali = (Button) findViewById(R.id.btnkembali);
+
+        btnTambahBarangMasuk.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity3.this, v_tambah_barangmasuk.class);
+                startActivity(intent);
+            }
+        });
         btnkembali.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -26,17 +34,5 @@ public class MainActivity3 extends AppCompatActivity {
                 startActivity(BukaActDua);
             }
         });
-
-        listView = (ListView) findViewById(R.id.mataKuliah);
-        String[] values = new String[]{
-                "Algoritma Informatika", "Struktur Data", "Pemrograman Web 1",
-                "Pemrograman 2", "Mobile Programming", "Kecerdasan Buatan",
-                "Sistem Informasi Manajemen", "Komputer Grafik I", "Fisika Dasar 1"
-        };
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this,
-                android.R.layout.simple_list_item_1,
-                android.R.id.text1, values);
-
-        listView.setAdapter(adapter);
     }
 }

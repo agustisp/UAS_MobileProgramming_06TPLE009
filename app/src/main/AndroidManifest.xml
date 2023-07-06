@@ -12,6 +12,9 @@
         android:theme="@style/Theme.TUGASPROJECT"
         tools:targetApi="31">
         <activity
+            android:name=".v_tambah_barangmasuk"
+            android:exported="false" />
+        <activity
             android:name=".v_tambah_admin"
             android:exported="false" />
         <activity
