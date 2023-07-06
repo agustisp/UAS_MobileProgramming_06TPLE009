@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:padding="16dp"
+    android:background="@drawable/v_kelola_admin_wall">
 
     <TextView
         android:layout_width="wrap_content"
@@ -13,21 +14,28 @@
         android:textSize="24sp"
         android:textStyle="bold"
         android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="16dp"/>
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/black"/>
 
     <EditText
         android:id="@+id/editTextUsername"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
+        android:padding="10dp"
+        android:layout_marginBottom="10dp"
         android:hint="Username"
-        android:inputType="text"/>
+        android:inputType="text"
+        android:background="#BDCDD6"/>
 
     <EditText
         android:id="@+id/editTextPassword"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
+        android:padding="10dp"
         android:hint="Password"
-        android:inputType="textPassword"/>
+        android:inputType="textPassword"
+        android:background="#BDCDD6"/>
 
     <Button
         android:id="@+id/buttonSimpan"
