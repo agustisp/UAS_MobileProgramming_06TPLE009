@@ -18,57 +18,11 @@
         android:textColor="@color/black">
     </TextView>
 
-    <TableLayout
-        android:id="@+id/tableLayoutInventory"
-        android:layout_width="wrap_content"
-        android:layout_height="314dp"
-        android:background="@drawable/border">
-
-        <!-- Table Header -->
-        <TableRow>
-            <TextView
-                android:layout_column="0"
-                android:padding="8dp"
-                android:text="ID"
-                android:textColor="@color/black"
-                android:background="@drawable/border"/>
-
-            <TextView
-                android:layout_column="1"
-                android:padding="8dp"
-                android:text="Nama"
-                android:textColor="@color/black"
-                android:background="@drawable/border"/>
-
-            <TextView
-                android:layout_column="2"
-                android:padding="8dp"
-                android:text="Merk"
-                android:textColor="@color/black"
-                android:background="@drawable/border"/>
-
-            <TextView
-                android:layout_column="3"
-                android:padding="8dp"
-                android:text="Jumlah"
-                android:textColor="@color/black"
-                android:background="@drawable/border"/>
-
-            <TextView
-                android:layout_column="4"
-                android:padding="8dp"
-                android:text="Harga"
-                android:textColor="@color/black"
-                android:background="@drawable/border"/>
-
-            <TextView
-                android:layout_column="5"
-                android:padding="8dp"
-                android:text="Penanggung Jawab"
-                android:textColor="@color/black"
-                android:background="@drawable/border"/>
-        </TableRow>
-    </TableLayout>
+    <ListView
+        android:id="@+id/listViewBarangMasuk"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp" />
 
     <Button
         android:id="@+id/btnTambahBarangMasuk"

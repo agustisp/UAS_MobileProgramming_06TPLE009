@@ -25,14 +25,6 @@ public class DatabaseHelper extends SQLiteOpenHelper{
     public static final String COLUMN_HARGA_BARANG = "harga_barang";
     public static final String COLUMN_PENANGGUNG_JAWAB_MASUK = "penanggung_jawab_masuk";
 
-    // Initializing table (barang_keluar)
-    public static final String TABLE_KELUAR = "barang_keluar";
-    public static final String COLUMN_ID_BARANGKELUAR = "id_barang_keluar";
-    public static final String COLUMN_NAMA_BARANGKELUAR = "nama_barangkeluar";
-    public static final String COLUMN_MERK_BARANGKELUAR = "merk_barangkeluar";
-    public static final String COLUMN_JUMLAH_BARANGKELUAR = "jumlah_barangkeluar";
-    public static final String COLUMN_HARGA_BARANGKELUAR = "harga_barangkeluar";
-    public static final String COLUMN_PENANGGUNG_JAWAB_KELUAR = "penanggung_jawab_keluar";
 
     public DatabaseHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -56,16 +48,6 @@ public class DatabaseHelper extends SQLiteOpenHelper{
                 + COLUMN_HARGA_BARANG + " REAL, "
                 + COLUMN_PENANGGUNG_JAWAB_MASUK + " TEXT)";
         db.execSQL(createBarangMasukTableQuery);
-
-        // Create the barang_masuk table
-        String createBarangKeluarTableQuery = "CREATE TABLE " + TABLE_KELUAR + "("
-                + COLUMN_ID_BARANGKELUAR + " INTEGER PRIMARY KEY AUTOINCREMENT, "
-                + COLUMN_NAMA_BARANGKELUAR + " TEXT, "
-                + COLUMN_MERK_BARANGKELUAR + " TEXT, "
-                + COLUMN_JUMLAH_BARANGKELUAR + " TEXT, "
-                + COLUMN_HARGA_BARANGKELUAR + " REAL, "
-                + COLUMN_PENANGGUNG_JAWAB_KELUAR + " TEXT)";
-        db.execSQL(createBarangKeluarTableQuery);
     }
 
     @Override
@@ -73,7 +55,6 @@ public class DatabaseHelper extends SQLiteOpenHelper{
         // Drop existing table if it exists
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_ADMIN);
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_MASUK);
-        db.execSQL("DROP TABLE IF EXISTS " + TABLE_KELUAR);
         // Create the table again
         onCreate(db);
     }
